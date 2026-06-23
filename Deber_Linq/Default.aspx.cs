@@ -1,6 +1,6 @@
 ﻿using System;
 using System.IO;
-using Negocio;
+using Capa_Negocios;
 using Capa_Datos;
 
 namespace Deber_Linq

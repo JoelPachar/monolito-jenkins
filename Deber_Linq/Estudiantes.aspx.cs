@@ -3,11 +3,11 @@ using System.IO;
 using System.Linq;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using Negocio;
+using Capa_Negocios;
 using Capa_Datos;
-using TuProyectoWeb.Negocio;
+using Capa_Negocios;
 
-namespace TuProyectoWeb
+namespace Deber_Linq
 {
     public partial class Estudiantes : System.Web.UI.Page
     {
