@@ -7,7 +7,7 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace TuProyectoWeb
+namespace Deber_Linq
 {
 
 
