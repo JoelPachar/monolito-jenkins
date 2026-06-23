@@ -1,12 +1,11 @@
-﻿using System;
+﻿using Capa_Datos;
+using Capa_Negocios; // <-- Corregido para usar tu capa de negocios real
+using System;
 using System.Linq;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using Capa_Datos;
-using Negocio;
-using TuProyectoWeb.Negocio;
 
-namespace TuProyectoWeb
+namespace Deber_Linq // <-- Corregido: Este es el nombre real de tu proyecto
 {
     public partial class Materias : Page
     {

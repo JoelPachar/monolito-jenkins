@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Capa_Datos;
 
-namespace Negocio
+namespace Capa_Negocios
 {
     public class ProfesorNegocio
     {
