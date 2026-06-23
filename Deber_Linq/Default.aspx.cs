@@ -3,7 +3,7 @@ using System.IO;
 using Negocio;
 using Capa_Datos;
 
-namespace TuProyectoWeb
+namespace Deber_Linq
 {
     public partial class Profesores : System.Web.UI.Page
     {

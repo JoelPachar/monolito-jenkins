@@ -1,4 +1,7 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="TuProyectoWeb.Profesores" UnobtrusiveValidationMode="None" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true"
+    CodeBehind="Default.aspx.cs"
+    Inherits="Deber_Linq.Profesores"
+    UnobtrusiveValidationMode="None" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es">
@@ -91,7 +94,7 @@
                 <div class="mb-3">
                     <asp:Label ID="lblFoto" runat="server" Text="Foto:" CssClass="form-label" />
                     <asp:FileUpload ID="fuFoto" runat="server" CssClass="form-control" accept="image/*" />
-                    <img id="imgPreviewProf" class="mt-2 rounded border" style="display:none; max-width:100px; max-height:100px;" />
+                    <img id="imgPreviewProf" class="mt-2 rounded border" style="display: none; max-width: 100px; max-height: 100px;" />
                 </div>
 
                 <div class="mb-3">
