@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ColegioDB" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=ColegioDB;Integrated Security=True;Encrypt=False" SettingsObjectName="Capa_Datos.Properties.Settings" SettingsPropertyName="ColegioDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Estudiante" Member="Estudiante">
+    <Type Name="Estudiante">
+      <Column Name="EstudianteId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Alu_Nombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Alu_FechaNacimiento" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Alu_SignoZodiacal" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Alu_Foto" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="MateriaId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Materia_Estudiante" Member="Materia" ThisKey="MateriaId" OtherKey="MateriaId" Type="Materia" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Materia" Member="Materia">
+    <Type Name="Materia">
+      <Column Name="MateriaId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Mat_Nombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Mat_Descripcion" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ProfesorId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Materia_Estudiante" Member="Estudiante" ThisKey="MateriaId" OtherKey="MateriaId" Type="Estudiante" />
+      <Association Name="Profesor_Materia" Member="Profesor" ThisKey="ProfesorId" OtherKey="ProfesorId" Type="Profesor" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Profesor" Member="Profesor">
+    <Type Name="Profesor">
+      <Column Name="ProfesorId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Pro_Nombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Pro_FechaNacimiento" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Pro_SignoZodiacal" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Pro_Especialidad" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Pro_FotoPath" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Association Name="Profesor_Materia" Member="Materia" ThisKey="ProfesorId" OtherKey="ProfesorId" Type="Materia" />
+    </Type>
+  </Table>
+</Database>
